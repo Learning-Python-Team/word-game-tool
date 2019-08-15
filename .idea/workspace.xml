@@ -44,11 +44,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="20" />
-    <option name="y" value="43" />
+    <option name="y" value="42" />
     <option name="width" value="1400" />
-    <option name="height" value="837" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -119,7 +119,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrabble_main.py" />
+      <option name="SCRIPT_NAME" value="D:\PyCharm\scrabble-tool\Scratch\scrabble_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
