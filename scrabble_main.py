@@ -1,3 +1,5 @@
+# NOTE - would be good to have a to-do list so people can easily get stuck in!
+
 import numpy as np
 
 
