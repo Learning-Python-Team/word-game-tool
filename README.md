@@ -21,7 +21,8 @@ Part 1: Score Finder - user enters their word and it calculates the score in scr
 
 Part 2a: Score Compare - user gives 2 words and you indicate which is the better scorer
 
-Additional idea by Ahmed:
+Additional idea by Ahmed:  
+
 Part 2b: Gameboard Setup - Allow user to set out their current board which above tools can use to calculate the optimal word
 
 Part 3: Word Finder - user gives their letters and tool shows them the best scoring word (or top 5 words) they can make with them
