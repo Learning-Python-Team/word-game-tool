@@ -6,7 +6,7 @@
 def point_conversion(word):
     # Convert word passed in to uppercase so it can find
     # keys in dictionary
-    word = word.upper()
+    word_upper = word.upper()
 
     # dictionary of letters and their point values
     charDict = {
@@ -42,7 +42,7 @@ def point_conversion(word):
     # Basically grabs the number value that correlates with the
     # letter in the word and creates a list. Returns the sum of the list
     # Example: 'Dog' -> sum([2, 1, 2]) = 5
-    return sum([charDict[char] for char in word])
+    return sum([charDict[char] for char in word_upper])
 
 
-print(point_conversion('dog'))
+# print(point_conversion('dog'))
