@@ -23,7 +23,7 @@ list_board_tl = ['b1', 'b2']
 
 # For testing - valid input is ab or ba
 
-word = str(input())
+word = str(input('Enter a word: '))
 
 
 # Location of first letter in word. input(board.key)
@@ -34,7 +34,7 @@ word_start = str(input())
 
 
 # This tests if input for word_start is a valid board location.
-if word_start not in list(board.keys()):
+if word_start not in list(dict_board.keys()):
     print('Sorry, invalid input. Try again? Yes or No')
 else:
     print('Thank you. Valid input')
@@ -89,3 +89,48 @@ def point_conversion(word):
     for char in word:
         score += tile_value_dict[char]
     return score
+
+
+# create function to convert a string of seven tiles to the highest scoring value
+def seven_tiles_to_highest_score(seven_tiles):
+    # convert seven_tiles to list of letters
+    seven_tiles_list = [tile for tile in seven_tiles]
+
+    # load in the .txt file of official scrabble words from 2015
+    base_word_text_file = open("Collins Scrabble Words (2015).txt", "r")
+    if base_word_text_file.mode == 'r':
+        base_word_list = base_word_text_file.read().split('\n')
+
+    # TODO, currently not functional
+    import re
+    # compile list of possible words using tiles (using regex?)
+    # remaining_tiles = seven_tiles
+    # possible_words = []
+    # for tile in seven_tiles:
+    # regex expression based on remaining tiles
+
+    # possible_words = [word for word in base_word_list if regex function worked correctly]
+    possible_words = ["FRUIT", "APPLE", "TEST"]
+
+    # create a list of calculated point values for all possible words
+    possible_values = [point_conversion(possible_word) for possible_word in possible_words]
+
+    # zip the possible words and possible values together into a dictionary
+    zipped_words_and_values = zip(possible_words, possible_values)
+    word_value_dict = dict(zipped_words_and_values)
+
+    # find the highest possible point value score
+    maximum_possible_score = word_value_dict[max(word_value_dict, key=word_value_dict.get)]
+
+    # list of results that match the highest scoring value
+    list_of_results = []
+    for possible_word, possible_value in word_value_dict.items():
+        if possible_value == maximum_possible_score:
+            list_of_results.append(possible_word)
+
+    # return a tuple of the max score and the word(s) with highest possible score
+    print (f'The list of the highest scoring words you can play is: {list_of_results}')
+    print (f'The highest possible score for any of these words is {maximum_possible_score}.')
+    # return maximum_possible_score, list_of_results
+
+seven_tiles_to_highest_score('ABCDEFG')
