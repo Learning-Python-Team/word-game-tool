@@ -1,20 +1,39 @@
 # main file for program operations
-# it's just waiting for you to edit it!!
+# please make any improvements that could be made!
+
+# import regex library for input validation
+import re
 
 # Welcome user
 print('Welcome to the Word Game Tool!')
 
+# import function from word_to_score.py to convert a given word to a point value
 from word_to_score import point_conversion
 
+# Explain purpose of tool to user
 print('This tool allows you to enter a word and receive the word\'s score based on a standardized point value system. To use the tool, simply enter the word below, or enter EXIT_TOOL to quit.')
 
+# Set tool status constant. 1 is on, 0 is off.
 TOOL_STATUS = 1
 
+# while the tool status is on, ask for user input and run function
 while TOOL_STATUS:
-    user_input = input('Enter the word you want to score: ')
-    if user_input == 'EXIT_TOOL':
-        print('You have exited the tool. Thanks!')
-        TOOL_STATUS = 0
-    else:
-        user_input_score = point_conversion(user_input)
-        print(f'You entered {user_input}, which scores {user_input_score}')
+	user_input = input('Enter the word you want to score: ')
+
+# if statement to allow user to close the tool
+	if user_input == 'EXIT_TOOL':
+		print('You have exited the tool. Thanks!')
+		TOOL_STATUS = 0
+
+# elif statement for empty input:
+	elif user_input == '':
+		print('You need to enter a word to use the tool!')
+		
+# elif statement for input validation
+	elif re.search('[\W\d]', user_input):
+		print(f'You entered {user_input}, which contains characters not found in the alphabet! Stick to A-Z please.')
+
+# main function to process correct user input
+	else:
+		user_input_score = point_conversion(user_input)
+		print(f'You entered {user_input}, which scores {user_input_score}')
