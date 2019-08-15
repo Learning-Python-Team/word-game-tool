@@ -1,9 +1,9 @@
-# scrabble-tool
-Repo for those participating in the scrabble tool project
+# Word Game-tool
+Repo for those participating in the Word Game tool project
 
 
 
-#Scrabble Score Tool
+#Word Game Score Tool
 The Project details taken from the group's excel sheet.
 Credit for this project idea goes to Jo.
 
@@ -17,7 +17,7 @@ I have done part 1 and 2 in python before so I know roughly what we need to do, 
 
 The 4 parts
 
-Part 1: Score Finder - user enters their word and it calculates the score in scrabble
+Part 1: Score Finder - user enters their word and it calculates the score based on values asigned to characters
 
 Part 2a: Score Compare - user gives 2 words and you indicate which is the better scorer
 
