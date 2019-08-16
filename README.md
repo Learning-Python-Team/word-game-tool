@@ -1,8 +1,8 @@
 # word-game-tool
-Project Language: Python
 
+Project Language: Python
 This is a basic tool to help players of word games based around Scrabble find the score of their words and assist them selecting the optimal word.
-Credit for this project idea goes to JiggsUK.
+Credit for this project idea goes to JiggsUK, John Steinhable, alexanderklarge, and Loran425.
 
 All development work is to be forked from the dev branch of the relevant phase. If you complete any work you would like added, push your work and create a pull request for it. Another member of the team will review it and merge.
 
