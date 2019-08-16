@@ -30,7 +30,7 @@ while TOOL_STATUS:
         print('You need to enter a word to use the tool!\n')
 
 # elif statement for input validation
-    elif re.search('\d', user_input):
+    elif re.search('[\d\W]', user_input):
         print(f'You entered {user_input}, which contains characters not found in the alphabet! Stick to A-Z please.\n')
 
 # main function to process correct user input
