@@ -1,4 +1,4 @@
-# Citizen Code of Conduct
+# Citizen Code of Conduct, Rights, Responsibilites, and Property
 
 ## 1. Purpose
 
@@ -89,7 +89,8 @@ Portions of text derived from the [Django Code of Conduct](https://www.djangopro
  
 All code, comments, or any content submitted on Git Hub for the Word-Game toold is owned exclusively by John Steinhable and the persons with the Slack usernames "JiggsUK", "Loran425", and "alexanderklarge".
 
-#Likenesses
+## Likenesses
 
 All likenesses in name, image, or otherwise are solely unintentional and coincidental.
-Updated August 2019
+
+## Updated August 2019
