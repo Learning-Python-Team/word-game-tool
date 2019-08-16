@@ -43,6 +43,3 @@ def point_conversion(word):
     # letter in the word and creates a list. Returns the sum of the list
     # Example: 'Dog' -> sum([2, 1, 2]) = 5
     return sum([charDict[char] for char in word_upper])
-
-
-# print(point_conversion('dog'))
