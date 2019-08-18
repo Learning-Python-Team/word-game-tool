@@ -1,4 +1,3 @@
-# import regex library for input validation
 import re
 
 
@@ -10,13 +9,8 @@ def valid_word_check(user_input):
     if base_word_text_file.mode == 'r':
         base_word_list = base_word_text_file.read().split('\n')
         base_word_text_file.close()
-        # elif statement for input validation
 
-        # elif statement to validate that input is a correctly spelled English word
-        # set constant is_word to false to assume that the user input is not a word
-        # is_word = False
-        # We use the base_word_list created from our .txt file
-        # if there are no * tiles, simply check if the input is a word
+        # if there are no * tiles, check if input is a valid word
         if '*' not in user_input:
             if user_input in base_word_list:
                 return True
@@ -28,5 +22,6 @@ def valid_word_check(user_input):
             for item in base_word_list:
                 if re.search(pattern, item):
                     return True
+        # word not spelt correctly
         else:
             return False
