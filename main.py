@@ -5,35 +5,36 @@
 import re
 # import function from word_to_score.py to convert a given word to a point value
 from word_to_score import point_conversion
+# import exit program to check if user wants to exit tool
+from exit_program import exit_program as ep
 
 # Welcome user
 print('Welcome to the Word Game Tool!\n')
 
 
 # Explain purpose of tool to user
-print('This tool allows you to enter a word and receive the word\'s score based on a standardized point value system. To use the tool, simply enter the word below, or enter EXIT_TOOL to quit.\n')
+print('This tool allows you to enter a word and receive the word\'s score based on a standardized point value system. To use the tool, simply enter the word below, or input \'Q\' to quit.\n')
 
-# Set tool status constant. 1 is on, 0 is off.
-TOOL_STATUS = 1
+while True:
 
-# while the tool status is on, ask for user input and run function
-while TOOL_STATUS:
+    # Gets user input
     user_input = input('Enter the word you want to score: ')
 
-# if statement to allow user to close the tool
-    if user_input == 'EXIT_TOOL':
-        print('You have exited the tool. Thanks!\n')
-        TOOL_STATUS = 0
+    # if user entered q, validates that they want to exit program
+    if user_input.upper() == 'Q':
+        # if it was entered by accident, it returns to tool
+        if ep(user_input) is False:
+            continue
 
-# elif statement for empty input:
+    # if statement for empty input:
     elif user_input == '':
         print('You need to enter a word to use the tool!\n')
 
-# elif statement for input validation
+    # elif statement for input validation
     elif re.search('[\d\W]', user_input):
         print(f'You entered {user_input}, which contains characters not found in the alphabet! Stick to A-Z please.\n')
 
-# main function to process correct user input
+    # main function to process correct user input
     else:
         user_input_score = point_conversion(user_input)
         print(f'You entered {user_input}, which scores {user_input_score}\n')
