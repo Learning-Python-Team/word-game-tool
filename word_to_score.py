@@ -10,7 +10,7 @@ def point_conversion(word):
 
     # dictionary of letters and their point values
     charDict = {
-        ' ': 0,
+        '*': 0,
         'A': 1,
         'B': 3,
         'C': 3,
