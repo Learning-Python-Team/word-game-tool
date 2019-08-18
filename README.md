@@ -15,7 +15,8 @@ Admins for this project are:
   - alexanderklarge
   
 #### Looking for a task?   
-Check out the Projects tab and the currently open project. You will find some 'To Do' tasks there. Feel free to pick one up and have a go. Just move it to 'In Progress' so we know someone is looking at it.
+Check out the Projects tab and the currently open project. You will find some 'To Do' tasks there. Feel free to pick one up and have a go. Just move it to 'In Progress' so we know someone is looking at it.  
+*Please consult the wiki on [How to Contribute](https://github.com/Learning-Python-Team/word-game-tool/wiki/How-this-Project-Works#simplest-way-to-contribute) before starting.*
 
 # Current Phase
 ### Phase 1: Score Finder 
