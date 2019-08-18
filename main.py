@@ -18,10 +18,10 @@ print('This tool allows you to enter a word and receive the word\'s score based 
 while True:
 
     # Gets user input
-    user_input = input('Enter the word you want to score: ')
+    user_input = input('Enter the word you want to score: ').upper()
 
     # if user entered q, validates that they want to exit program
-    if user_input.upper() == 'Q':
+    if user_input == 'Q':
         # if it was entered by accident, it returns to tool
         if ep(user_input) is False:
             continue
