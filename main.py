@@ -3,8 +3,10 @@
 
 # import regex library for input validation
 import re
+
 # import function from word_to_score.py to convert a given word to a point value
 from word_to_score import point_conversion
+from check_string import check_diff_characters
 
 # Welcome user
 print('Welcome to the Word Game Tool!\n')
@@ -18,7 +20,7 @@ TOOL_STATUS = 1
 
 # while the tool status is on, ask for user input and run function
 while TOOL_STATUS:
-    user_input = input('Enter the word you want to score: ')
+    user_input = input('Enter the word you want to score: ').upper()
 
 # if statement to allow user to close the tool
     if user_input == 'EXIT_TOOL':
@@ -30,7 +32,7 @@ while TOOL_STATUS:
         print('You need to enter a word to use the tool!\n')
 
 # elif statement for input validation
-    elif re.search('[\d\W]', user_input):
+    elif check_diff_characters(user_input):
         print(f'You entered {user_input}, which contains characters not found in the alphabet! Stick to A-Z please.\n')
 
 # main function to process correct user input
