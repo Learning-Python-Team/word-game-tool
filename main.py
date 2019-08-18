@@ -20,7 +20,7 @@ print('Welcome to the Word Game Tool!\n')
 
 # Explain purpose of tool to user
 print('''This tool allows you to enter a word and receive the word\'s score based on a standardized point 
-value system. To use the tool, simply enter the word below
+value system. To use the tool, simply enter the word below.
  You may use '*' to represent any letter, but it won't score you any points!' Enrer EXIT_TOOL to quit.\n''')
 
 # Set tool status constant. 1 is on, 0 is off.
