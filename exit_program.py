@@ -8,7 +8,7 @@ def exit_program(word):
     # Make sure they enter a valid response to the question, if not, keep asking
     while validate != 'Y' and validate != 'N':
         print('\nSorry, that was invalid')
-        validate = input('Please try again. Would you like to exit the tool: ').upper()
+        validate = input('Please try again. Would you like to exit the tool (Y)es/(N)o: ').upper()
 
     # If they enter 'y', tool closes
     if validate == 'Y':
