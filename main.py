@@ -4,26 +4,26 @@
 # import regex library and other file functions
 import re
 from word_to_score import point_conversion
+from exit_program import exit_program as ep
 from valid_word_check import valid_word_check
 
 print('Welcome to the Word Game Tool!\n')
 
 # Explain purpose of tool to user
 print('''This tool allows you to enter a word and receive the word\'s score based on a standardized point 
-value system. To use the tool, simply enter the word below.
-You may use '*' to represent any letter, but it won't score you any points! Enter EXIT_TOOL to quit.\n''')
+value system. To use the tool, simply enter the word below, or input \'Q\' to quit.
+You may use '*' to represent any letter, but it won't score you any points! \n''')
 
-# Boolean check for while loop. 1 is true (on), 0 is false (off).
-TOOL_STATUS = 1
+while True:
 
-# while the tool status is on, ask for user input and run function
-while TOOL_STATUS:
+    # Gets user input
     user_input = input('Enter the word you want to score: ').upper()
 
-    # allow user to close the tool
-    if user_input == 'EXIT_TOOL':
-        print('You have exited the tool. Thanks!\n')
-        TOOL_STATUS = 0
+    # if user entered q, validates that they want to exit program
+    if user_input == 'Q':
+        # if it was entered by accident, it returns to tool
+        if ep(user_input) is False:
+            continue
 
     # check for empty input
     elif user_input == '':
