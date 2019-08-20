@@ -1,16 +1,11 @@
-# function to convert a word to the base point value using the letter
-
+# function to convert a word to the base point value using the letter value
 # does not account for value modifications based on a board
 
 
 def point_conversion(word):
-    # Convert word passed in to uppercase so it can find
-    # keys in dictionary
-    word = word.upper()
-
-    # dictionary of letters and their point values
-    charDict = {
-        ' ': 0,
+    # dictionary of (letters, point values)
+    char_dict = {
+        '*': 0,
         'A': 1,
         'B': 3,
         'C': 3,
@@ -38,11 +33,5 @@ def point_conversion(word):
         'Y': 4,
         'Z': 10,
     }
-    # Refactored for loop with list comprehension
-    # Basically grabs the number value that correlates with the
-    # letter in the word and creates a list. Returns the sum of the list
-    # Example: 'Dog' -> sum([2, 1, 2]) = 5
-    return sum([charDict[char] for char in word])
-
-
-print(point_conversion('dog'))
+    # sums each char score
+    return sum([char_dict[char] for char in word])
