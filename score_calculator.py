@@ -2,7 +2,7 @@
 # does not account for value modifications based on a board
 
 
-def point_conversion(word):
+def base_score(word):
     # dictionary of (letters, point values)
     char_dict = {
         '*': 0,
