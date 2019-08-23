@@ -3,9 +3,9 @@
 
 # import regex library and other file functions
 import re
-from word_to_score import point_conversion
+from score_calculator import base_score
 from exit_program import exit_program as ep
-from valid_word_check import valid_word_check
+from word_validation import valid_word_check
 
 print('Welcome to the Word Game Tool!\n')
 
@@ -40,5 +40,5 @@ while True:
 
     # process user_input once all checks are cleared
     else:
-        user_input_score = point_conversion(user_input)
+        user_input_score = base_score(user_input)
         print(f'You entered {user_input}, which scores {user_input_score}\n')

@@ -1,5 +1,4 @@
 # function to convert a word to the base point value using the letter value
-# does not account for value modifications based on a board
 
 
 def base_score(word):
@@ -35,3 +34,8 @@ def base_score(word):
     }
     # sums each char score
     return sum([char_dict[char] for char in word])
+
+
+def multiplier_score(word):
+    # calulates word score including any multiplier tiles
+    pass

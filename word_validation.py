@@ -1,6 +1,11 @@
 import re
 
 
+def word_validation(word):
+    # put main.py validation checks here and call it from main
+    pass
+
+
 def valid_word_check(user_input):
     # open the .txt file of official scrabble words from 2015 using the 'read' status
     base_word_text_file = open("Collins Scrabble Words (2015).txt", "r")
