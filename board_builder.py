@@ -1,9 +1,7 @@
-# NOTE - would be good to have a to-do list so people can easily get stuck in!
-
 import numpy as np
 
 
-def buildBoard():
+def create_board():
     # to build the board we create multiple layers:
     # 1. a user input layer which will be updated later to carry the input word
     # 2. a letter multiplier layer that will be used to calculate the word score
@@ -35,27 +33,6 @@ def buildBoard():
     return np.stack((input_array, letter_multiplier_array, word_multiplier_array))
 
 
-def userInput():
+def view_board():
     pass
-    # input first letter tile
-    # input direction
-    # input number of letter
-    # update the input array of the game board
-
-
-def calculateScore():
-    pass
-    # this will be used to calculate the user score based on their input and the game board score modifiers
-
-
-if __name__ == "__main__":
-    # build the game board
-    board = buildBoard()
-
-    print("user input\n",board[0])
-
-    # update the game board using user input
-    userInput()
-
-    # calculate score
-    calculateScore()
+   

@@ -1,8 +1,7 @@
 # function to convert a word to the base point value using the letter value
-# does not account for value modifications based on a board
 
 
-def point_conversion(word):
+def base_score(word):
     # dictionary of (letters, point values)
     char_dict = {
         '*': 0,
@@ -35,3 +34,8 @@ def point_conversion(word):
     }
     # sums each char score
     return sum([char_dict[char] for char in word])
+
+
+def multiplier_score(word):
+    # calulates word score including any multiplier tiles
+    pass
