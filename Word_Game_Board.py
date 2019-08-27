@@ -15,13 +15,16 @@ white = (255,255,255)
 pygame.init()
 pygame.display.set_caption('Word Game Tool')
 pygame.mixer.init()
+
 display_width = 700
 display_height = 680
+
 screen = pygame.display.set_mode((display_width, display_height))
 clock = pygame.time.Clock()
 FPS = 30
 screen.fill(beige)
 pygame.display.update()
+
 
 
 def rows_columns():
@@ -160,4 +163,3 @@ def rows_columns():
 
 
 rows_columns()
-
