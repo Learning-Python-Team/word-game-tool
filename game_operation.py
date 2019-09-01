@@ -1,4 +1,9 @@
 # handles the operation of the tool and is called by main to run it
+from Word_Game_Board import pygame_setup
+
+
+def board():
+    pygame_setup()
 
 
 def current_game_state():
