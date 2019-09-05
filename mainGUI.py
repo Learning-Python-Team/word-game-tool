@@ -1,7 +1,8 @@
 import PySimpleGUI as sg
 import re
-from word_to_score import point_conversion
-from valid_word_check import valid_word_check
+
+from score_calculator import base_score
+from word_validation import valid_word_check
 
 layout = [[sg.Text('''This tool allows you to enter a word and receive the word\'s score based on a standardized point 
 value system. To use the tool, simply enter the word below, \n
@@ -14,7 +15,6 @@ window = sg.Window('Scrabble Points Finder', layout)
 
 while True:  # Event Loop
     event, values = window.Read()
-    print(event, values)
     if event is None or event == 'Exit':
         break
     user_input = values['_IN_'].upper()
@@ -33,8 +33,7 @@ while True:  # Event Loop
 
         # process user_input once all checks are cleared
         else:
-            user_input_score = point_conversion(user_input)
-            print(f'You entered {user_input}, which scores {user_input_score}\n')
+            user_input_score = base_score(user_input)
             # Update the "output" element to be the value of "input" element
             window.Element('_OUTPUT_').Update(values['_IN_']), user_input_score
             sg.Popup(f"The score is {user_input_score}", values['_IN_'], )
