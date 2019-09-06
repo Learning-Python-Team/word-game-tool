@@ -34,13 +34,15 @@ char_dict = {
 	'Z': 10,
 }
 
+
 def base_score(word):
 	# sums each char score
 	return sum([char_dict[char] for char in word])
 
+
 def letter_multiplier_check(word_dict, word_pos_dict):
 	# checks for letter multipliers and calculates new score
-	letter_score_matrix = board_builder.letter_score_calc() # call letter score matrix from board_builder.py
+	letter_score_matrix = board_builder.letter_score_calc()  # call letter score matrix from board_builder.py
 
 	for key, val in word_pos_dict.items():
 		if key in letter_score_matrix:
@@ -49,6 +51,7 @@ def letter_multiplier_check(word_dict, word_pos_dict):
 			continue
 
 	return word_dict, sum(word_dict.values())
+
 
 def word_multiplier_check(word_pos_dict, score):
 	# checks for word multipliers and calculates new score
